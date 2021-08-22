@@ -30,4 +30,17 @@ spotifyApi
 
 // ### Route handlers ###
 
+app.get('/', (req, res) => res.render('index'));
+
+app.get('/artist-search', (req, res) => {
+   const artist = req.query.artist;
+   spotifyApi
+      .searchArtists(artist)
+      .then(data => {
+         console.log('The received data from the API: ', data.body.artists);
+         res.render('artist-search-results', { data: data.body.artists.items });
+      })
+      .catch(err => console.log('The error while searching artists occurred: ', err));
+});
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
