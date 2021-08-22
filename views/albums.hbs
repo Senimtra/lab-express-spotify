@@ -1,0 +1,14 @@
+<!--
+##############################
+## Iteration 4: View Albums ##
+############################## -->
+
+Albums from:
+{{data.0.artists.0.name}}
+{{#each data}}
+   <div>
+      <img src='{{images.0.url}}' alt='' />
+   </div>
+   {{name}}
+   <div class='btn btn-danger'>View Tracks</div>
+{{/each}}

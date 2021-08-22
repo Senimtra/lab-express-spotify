@@ -1,7 +1,7 @@
 {{#each data}}
    <div>
-      <img src='{{images.0.url}}' />
+      <img src='{{images.0.url}}' alt='{{name}}' />
    </div>
    <p>{{name}}</p>
-   <div class='btn btn-danger'>View Albums</div>
+   <a href='/albums/{{id}}'><div class='btn btn-danger'>View Albums</div></a>
 {{/each}}
