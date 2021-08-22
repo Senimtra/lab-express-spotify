@@ -52,6 +52,19 @@ app.get('/albums/:artistId', (req, res) => {
          // console.log('Artist albums', data.body.items);
          res.render('albums', { data: data.body.items });
       })
+      .catch(err => console.log('The error while getting the artist\'s album occured: ', err));
 });
+
+app.get('/tracks/:albumId', (req, res) => {
+   // console.log(req.params);
+   const albumId = req.params.albumId;
+   spotifyApi
+      .getAlbumTracks(albumId)
+      .then(data => {
+         // console.log(data.body.items);
+         res.render('tracks', { data: data.body.items });
+      })
+      .catch(err => console.log('The error while getting the album\'s tracks occured: ', err));
+})
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
