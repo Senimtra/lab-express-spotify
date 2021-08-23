@@ -1,0 +1,66 @@
+/*
+##########################
+## Iteration 6: Styling ##
+########################## */
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: rgb(235, 235, 223);
+}
+
+.background {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   background-image: url(../images/spotify-background.jpeg);
+   background-size: cover;
+   background-position: center;
+}
+
+.search-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background-color: rgba(255, 255, 255, 0.61);
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.btn-search {
+   margin-top: 1em;
+   width: max-content;
+}
+
+.record img {
+   width: 100%;
+   height: 20vw;
+   background-color: #747474;
+}
+
+.record-container {
+   background-color: #4d4d4d;
+   min-width: 0;
+}
+
+.record-name {
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 90%;
+   overflow: hidden;
+   color: white;
+}
+
+thead {
+   background-color: #4d4d4d;
+   color: whitesmoke;
+   height: 5em;
+}
